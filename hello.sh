@@ -1,1 +1,2 @@
-echo "Hello $USER!"
+USERNAME="$(whoami)"
+echo "Hello ${USERNAME}!"
