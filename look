@@ -1,0 +1,1 @@
+find . \( -regex ".*z" -or -regex ".*/\a.*" -or  -regex ".*/\z.*a"  \)
