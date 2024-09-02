@@ -1,2 +1,1 @@
-USERNAME="$(whoami)"
-echo "Hello ${USERNAME}!"
+echo "Hello orahmouni!"
