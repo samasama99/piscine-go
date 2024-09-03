@@ -16,6 +16,7 @@ func PrintComb() {
         if s == 8 && f != 7 {
             f++
             s = f + 1
+            t = s + 1
         } else if t == 9 && s != 8 {
 			s++
 			t = s + 1
