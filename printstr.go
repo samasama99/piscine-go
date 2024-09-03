@@ -6,7 +6,7 @@ func PrintStr(s string) {
 	i := -1
 
 	for i != len(s) {
-		z01.PrintRune(s[i])
+		z01.PrintRune(rune(s[i]))
 		i++
 	}
 }
