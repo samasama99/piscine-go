@@ -22,10 +22,6 @@ func PrintComb() {
 			t = s + 1
 		} else if t != 9 {
           t++
-        } else if s != 8 {
-          s++
-        } else if f != 7 {
-          f++
         } else {
           break
         }
