@@ -12,19 +12,19 @@ func PrintComb() {
 			z01.PrintRune(',')
 			z01.PrintRune(' ')
 		}
-      
-        if s == 8 && f != 7 {
-            f++
-            s = f + 1
-            t = s + 1
-        } else if t == 9 && s != 8 {
+
+		if s == 8 && f != 7 {
+			f++
+			s = f + 1
+			t = s + 1
+		} else if t == 9 && s != 8 {
 			s++
 			t = s + 1
 		} else if t != 9 {
-          t++
-        } else {
-          break
-        }
+			t++
+		} else {
+			break
+		}
 	}
-  z01.PrintRune('\n')
+	z01.PrintRune('\n')
 }
