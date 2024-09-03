@@ -3,11 +3,11 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintComb() {
-	f, s, t := 0, 1, 2
+	var f, s, t rune = 0, 1, 2
 	for {
-		z01.PrintRune(rune(f + '0'))
-		z01.PrintRune(rune(s + '0'))
-		z01.PrintRune(rune(t + '0'))
+		z01.PrintRune(f + 48)
+		z01.PrintRune(s + 48)
+		z01.PrintRune(t + 48)
 		if f != 7 {
 			z01.PrintRune(',')
 			z01.PrintRune(' ')
