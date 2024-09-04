@@ -6,6 +6,7 @@ func TrimAtoi(s string) int {
 	for _, c := range s {
 		if index == 0 && c == '-' {
 			newString[index] = '-'
+			index++
 		}
 		if isNumeric(c) {
 			newString[index] = c
