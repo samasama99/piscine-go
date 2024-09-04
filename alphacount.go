@@ -1,7 +1,7 @@
 package piscine
 
 func isAlpha(c rune) bool {
-	return c > 'A' && c < 'Z' || c > 'a' && c < 'z'
+	return c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z'
 }
 
 func AlphaCount(s string) int {
