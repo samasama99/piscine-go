@@ -34,6 +34,10 @@ func BasicAtoi2(s string) int {
 }
 
 func Atoi(s string) int {
+    if len(s) == 0 {
+      return 0
+    }
+  
 	if s == "-9223372036854775808" {
 		return -9223372036854775808
 	}
