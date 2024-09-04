@@ -2,11 +2,11 @@ package piscine
 
 func ToUpper(s string) string {
 	length := len(s)
-	newString := make([]byte, length)
+	newString := make([]rune, length)
 
 	for i, c := range s {
 		if isAlpha(c) && c > 'Z' {
-			newString[i] = byte(c - 32)
+			newString[i] = c - 32
 		}
 	}
 
