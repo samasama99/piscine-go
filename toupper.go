@@ -7,6 +7,8 @@ func ToUpper(s string) string {
 	for i, c := range s {
 		if isAlpha(c) && c > 'Z' {
 			newString[i] = c - 32
+		} else {
+			newString[i] = c
 		}
 	}
 
