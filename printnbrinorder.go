@@ -5,6 +5,10 @@ import (
 )
 
 func PrintNbrInOrder(n int) {
+	if n == 0 {
+		z01.PrintRune(rune(48))
+	}
+
 	histogram := make([]int, 10)
 	tmp := n
 	for tmp != 0 {
