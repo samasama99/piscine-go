@@ -5,7 +5,7 @@ func IsLower(s string) bool {
 		return false
 	}
 	for _, value := range s {
-		if value >= 'z' {
+		if value < 'a' {
 			return false
 		}
 	}
