@@ -10,7 +10,7 @@ func isValidNumber(s string) bool {
 }
 
 func BasicAtoi2(s string) int {
-	if isValidNumber(s) {
+	if !isValidNumber(s) {
 		return 0
 	}
 	return BasicAtoi(s)
