@@ -44,6 +44,8 @@ func Atoi(s string) int {
 
 	if s[0] == '-' {
 		return BasicAtoi2(s[1:]) * -1
-	}
+	} else if s[0] == '+' {
+        return BasicAtoi2(s[1:])
+    }
 	return BasicAtoi2(s)
 }
