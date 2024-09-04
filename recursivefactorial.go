@@ -2,7 +2,7 @@ package piscine
 
 func recursiveFactorialHelper(nb, current int) int {
 	if nb == 0 {
-		return 1
+		return current
 	}
 	tmp := current * nb
 	if tmp < current {
