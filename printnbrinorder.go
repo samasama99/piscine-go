@@ -5,7 +5,7 @@ import (
 )
 
 func PrintNbrInOrder(n int) {
-	histogram := make(map[int]int)
+	histogram := make([]int, 10)
 	tmp := n
 	for tmp != 0 {
 		histogram[tmp%10]++
