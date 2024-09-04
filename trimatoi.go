@@ -1,9 +1,9 @@
 package piscine
 
 func TrimAtoi(s string) int {
-	newString := make([]byte, len(s))
+	newString := make([]rune, len(s))
 	index := 0
-	for i, c := range s {
+	for _, c := range s {
 		if isNumeric(c) {
 			newString[index] = c
 			index++
