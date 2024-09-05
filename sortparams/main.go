@@ -17,6 +17,10 @@ func transform[T any, U any](collection []T, transformer Transformer[T, U]) []U 
 }
 
 func main() {
+	if len(os.Args) < 2 {
+		return
+	}
+
 	strings := os.Args[1:]
 	chars := transform(strings, func(v string) byte {
 		return v[0]
