@@ -4,9 +4,11 @@ func Join(strs []string, sep string) string {
 	if len(strs) == 0 {
 		return ""
 	}
-	if len(strs) == 1 {
-		return strs[0]
-	}
+
 	lastElem := strs[len(strs)-1]
-	return BasicJoin(strs[0:]) + lastElem
+	res := ""
+	for _, e := range strs {
+		res = res + e + sep
+	}
+	return res + lastElem
 }
