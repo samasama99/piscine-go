@@ -13,5 +13,5 @@ func PrintStr(s string) {
 }
 
 func main() {
-	PrintStr(os.Args[0])
+	PrintStr(os.Args[0][2:])
 }
