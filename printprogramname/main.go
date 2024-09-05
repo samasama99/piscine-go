@@ -7,11 +7,12 @@ import (
 )
 
 func PrintStr(s string) {
-	for i := 0; i < len(s); i++ {
-		z01.PrintRune(rune(s[i]))
+	for _, c := range s {
+		z01.PrintRune(c)
 	}
 }
 
 func main() {
 	PrintStr(os.Args[0][2:])
+	z01.PrintRune('\n')
 }
