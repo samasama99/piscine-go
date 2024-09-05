@@ -1,20 +1,9 @@
 package main
 
 import (
-	"os"
-
 	"github.com/01-edu/z01"
+	"os"
 )
-
-type Transformer[T any, U any] func(T) U
-
-func transform[T any, U any](collection []T, transformer Transformer[T, U]) []U {
-	newCollection := make([]U, len(collection))
-	for i, value := range collection {
-		newCollection[i] = transformer(value)
-	}
-	return newCollection
-}
 
 func main() {
 	if len(os.Args) < 2 {
@@ -22,9 +11,10 @@ func main() {
 	}
 
 	strings := os.Args[1:]
-	chars := transform(strings, func(v string) byte {
-		return v[0]
-	})
+	chars := make([]byte, len(strings))
+	for i, s := range strings {
+		chars[i] = s[0]
+	}
 	printInOrder(chars)
 }
 
@@ -41,7 +31,7 @@ func printInOrder(chars []byte) {
 	for key, v := range histogram {
 		for i := 0; i < v; i++ {
 			z01.PrintRune(rune(key))
-			z01.PrintRune(rune('\n'))
+			z01.PrintRune('\n')
 		}
 	}
 }
