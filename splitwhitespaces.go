@@ -20,9 +20,3 @@ func SplitWhiteSpaces(s string) []string {
 	}
 	return result
 }
-
-// SplitWhiteSpaces("+k#BK2hPEf&mt N)i\\fdH%QS)z> /UCHU.t1qww;e [=yo'Cpm#z-kA e!wxQLIS.CzWk b;<\\]kC*x[b:q e7QXt+ihx#~hJ n6`~:`aVsDz  ")
-//==
-//[]string{"+k#BK2hPEf&mt", "N)i\\fdH%QS)z>", "/UCHU.t1qww;e", "[=yo'Cpm#z-kA", "e!wxQLIS.CzWk", "b;<\\]kC*x[b:q", "e7QXt+ihx#~hJ", "n6`~:`aVsDz", ""}
-//instead of
-//[]string{"+k#BK2hPEf&mt", "N)i\\fdH%QS)z>", "/UCHU.t1qww;e", "[=yo'Cpm#z-kA", "e!wxQLIS.CzWk", "b;<\\]kC*x[b:q", "e7QXt+ihx#~hJ", "n6`~:`aVsDz"}
