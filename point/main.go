@@ -31,32 +31,31 @@ func main() {
 
 func intToString(n int) string {
 	if n == 0 {
-		z01.PrintRune(rune(48))
+		z01.PrintRune('0')
 	}
+	Map := "0123456789"
 	tmp := n
 	res := ""
 	for tmp != 0 {
 		switch tmp % 10 {
 		case 0:
-			res = "0" + res
+			res = Map[0:1] + res
 		case 1:
-			res = "1" + res
+			res = Map[1:2] + res
 		case 2:
-			res = "2" + res
+			res = Map[2:3] + res
 		case 3:
-			res = "3" + res
+			res = Map[3:4] + res
 		case 4:
-			res = "4" + res
+			res = Map[4:5] + res
 		case 5:
-			res = "5" + res
+			res = Map[5:6] + res
 		case 6:
-			res = "6" + res
+			res = Map[6:7] + res
 		case 7:
-			res = "7" + res
+			res = Map[7:8] + res
 		case 8:
-			res = "8" + res
-		case 9:
-			res = "9" + res
+			res = Map[8:9] + res
 		}
 		tmp = tmp / 10
 	}
