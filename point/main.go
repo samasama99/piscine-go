@@ -24,41 +24,40 @@ func main() {
 
 	setPoint(points)
 	printStr("x = ")
-	printStr(intToString(points.x))
+	if points.x == 0 {
+		z01.PrintRune(48)
+	} else {
+		printIntRecursive(points.x)
+	}
 	printStr(", y = ")
-	printStr(intToString(points.y))
+	if points.y == 0 {
+		z01.PrintRune(48)
+	} else {
+		printIntRecursive(points.y)
+	}
 }
 
-func intToString(n int) string {
-	if n == 0 {
-		z01.PrintRune('0')
+func printIntRecursive(nbr int) {
+	if nbr == 0 {
+		return
 	}
-	Map := "0123456789"
-	tmp := n
-	res := ""
-	for tmp != 0 {
-		switch tmp % 10 {
-		case 0:
-			res = Map[0:1] + res
-		case 1:
-			res = Map[1:2] + res
-		case 2:
-			res = Map[2:3] + res
-		case 3:
-			res = Map[3:4] + res
-		case 4:
-			res = Map[4:5] + res
-		case 5:
-			res = Map[5:6] + res
-		case 6:
-			res = Map[6:7] + res
-		case 7:
-			res = Map[7:8] + res
-		case 8:
-			res = Map[8:9] + res
-		}
-		tmp = tmp / 10
+	printIntRecursive(nbr / 10)
+	switch nbr % 10 {
+	case 1:
+		z01.PrintRune(49)
+	case 2:
+		z01.PrintRune(50)
+	case 3:
+		z01.PrintRune(51)
+	case 4:
+		z01.PrintRune(52)
+	case 5:
+		z01.PrintRune(53)
+	case 6:
+		z01.PrintRune(54)
+	case 7:
+		z01.PrintRune(55)
+	case 8:
+		z01.PrintRune(56)
 	}
-
-	return res
 }
