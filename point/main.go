@@ -24,18 +24,18 @@ func main() {
 
 	setPoint(points)
 	printStr("x = ")
-	if points.x == 0 {
-		z01.PrintRune(48)
-	} else {
-		printIntRecursive(points.x)
-	}
+	printInt(points.x)
 	printStr(", y = ")
-	if points.y == 0 {
+	printInt(points.y)
+	z01.PrintRune('\n')
+}
+
+func printInt(nbr int) {
+	if nbr == 0 {
 		z01.PrintRune(48)
 	} else {
-		printIntRecursive(points.y)
+		printIntRecursive(nbr)
 	}
-	z01.PrintRune('\n')
 }
 
 func printIntRecursive(nbr int) {
