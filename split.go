@@ -5,7 +5,7 @@ func Split(s, sep string) []string {
 	var current string
 
 	sliceLen := len(sep)
-	for i := 0; i < len(s)-sliceLen; i++ {
+	for i := 0; i < len(s); i++ {
 		slice := s[i : i+sliceLen]
 		if slice == sep && len(current) > 0 {
 			result = append(result, current)
@@ -21,3 +21,5 @@ func Split(s, sep string) []string {
 	}
 	return result
 }
+
+// "AB" with "XO" as the separator => i == 0 ; i < 2 - 2
