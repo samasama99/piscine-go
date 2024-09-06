@@ -10,6 +10,7 @@ func Split(s, sep string) []string {
 		if slice == sep && len(current) > 0 {
 			result = append(result, current)
 			current = ""
+			i++
 		} else if slice != sep {
 			current += string(s[i])
 		}
