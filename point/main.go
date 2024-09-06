@@ -1,8 +1,8 @@
 package main
 
-import (
-	"github.com/01-edu/z01"
-)
+import "github.com/01-edu/z01"
+
+var NUMBERS_AS_RUNES = []rune{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
 
 type point struct {
 	x, y int
@@ -42,22 +42,5 @@ func printIntRecursive(nbr int) {
 		return
 	}
 	printIntRecursive(nbr / 10)
-	switch nbr % 10 {
-	case 1:
-		z01.PrintRune(49)
-	case 2:
-		z01.PrintRune(50)
-	case 3:
-		z01.PrintRune(51)
-	case 4:
-		z01.PrintRune(52)
-	case 5:
-		z01.PrintRune(53)
-	case 6:
-		z01.PrintRune(54)
-	case 7:
-		z01.PrintRune(55)
-	case 8:
-		z01.PrintRune(56)
-	}
+	z01.PrintRune(NUMBERS_AS_RUNES[nbr%10])
 }
