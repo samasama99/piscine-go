@@ -15,5 +15,5 @@ func SplitWhiteSpaces(s string) []string {
 			current += string(c)
 		}
 	}
-	return result
+	return append(result, current)
 }
