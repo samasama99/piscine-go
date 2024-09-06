@@ -35,6 +35,7 @@ func main() {
 	} else {
 		printIntRecursive(points.y)
 	}
+	z01.PrintRune('\n')
 }
 
 func printIntRecursive(nbr int) {
