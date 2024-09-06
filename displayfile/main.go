@@ -1,21 +1,22 @@
 package main
 
 import (
+	"fmt"
 	"os"
 )
 
 func main() {
 	if len(os.Args) < 2 {
-		println("File name missing")
+		fmt.Println("File name missing")
 		return
 	}
 	if len(os.Args) > 2 {
-		println("Too many arguments")
+		fmt.Println("Too many arguments")
 		return
 	}
 	filename := os.Args[1]
 	content, _ := os.ReadFile(filename)
-	println(string(content))
+	fmt.Println(string(content))
 }
 
 // Write a program that displays, on the standard output, the content of a file given as argument.
