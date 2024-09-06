@@ -11,7 +11,7 @@ func SplitWhiteSpaces(s string) []string {
 		if isWhiteSpace(c) && len(current) > 0 {
 			result = append(result, current)
 			current = ""
-		} else if isWhiteSpace(c) {
+		} else if !isWhiteSpace(c) {
 			current += string(c)
 		}
 	}
