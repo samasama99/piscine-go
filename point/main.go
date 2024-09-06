@@ -24,19 +24,22 @@ func main() {
 
 	setPoint(points)
 	printStr("x = ")
-	PrintNbr(points.x)
+	printStr(intToString(points.x))
 	printStr(", y = ")
-	PrintNbr(points.y)
+	printStr(intToString(points.y))
 }
 
-func PrintNbr(n int) {
+func intToString(n int) string {
 	if n == 0 {
 		z01.PrintRune(rune(48))
 	}
 
 	tmp := n
+	res := ""
 	for tmp != 0 {
-		z01.PrintRune(rune(tmp%10 + 48))
+		res = string(rune(tmp%10+48)) + res
 		tmp = tmp / 10
 	}
+
+	return res
 }
