@@ -5,14 +5,20 @@ func Split(s, sep string) []string {
 	var current string
 
 	sliceLen := len(sep)
-	for i := 0; i < len(s); i++ {
-		slice := s[i : i+sliceLen]
-		if slice == sep && len(current) > 0 {
-			result = append(result, current)
-			current = ""
-			i++
-		} else if slice != sep {
-			current += string(s[i])
+	length := len(s)
+	for i := 0; i < length; i++ {
+		if length-i-sliceLen == 0 {
+			current += s[i:]
+			break
+		} else {
+			slice := s[i : i+sliceLen]
+			if slice == sep && len(current) > 0 {
+				result = append(result, current)
+				current = ""
+				i++
+			} else if slice != sep {
+				current += string(s[i])
+			}
 		}
 	}
 
