@@ -15,7 +15,7 @@ func Split(s, sep string) []string {
 			if slice == sep && len(current) > 0 {
 				result = append(result, current)
 				current = ""
-				i += sliceLen
+				i += sliceLen - 1
 			} else if slice != sep {
 				current += string(s[i])
 			}
