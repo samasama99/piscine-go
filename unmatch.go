@@ -6,7 +6,7 @@ func Unmatch(a []int) int {
 		history[value] = !history[value]
 	}
 	for key, value := range history {
-		if !value {
+		if value {
 			return key
 		}
 	}
