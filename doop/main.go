@@ -125,7 +125,7 @@ func add(a, b int) (sum int, overflow bool) {
 
 func multiply(a, b int) (sum int, overflow bool) {
 	// TODO fix this please
-	println("WHAT SUP")
+	//println("WHAT SUP")
 	// "-253" "*" "15"
 	// 15 > MaxInt / -253 == true
 	// a * b > MaxInt == false
@@ -133,7 +133,7 @@ func multiply(a, b int) (sum int, overflow bool) {
 		overflow = true
 		return
 	}
-	println("WHAT SUP")
+	//println("WHAT SUP")
 	sum = a * b
 	return
 }
