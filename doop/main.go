@@ -35,7 +35,7 @@ func main() {
 		printInt(sum)
 	case "/":
 		if n2 == 0 {
-			printStr("No division by 0")
+			os.Stdout.WriteString("No division by 0")
 			return
 		}
 		sum, overflow := divide(n1, n2)
@@ -45,14 +45,14 @@ func main() {
 		printInt(sum)
 	case "%":
 		if n2 == 0 {
-			printStr("No modulo by 0")
+			os.Stdout.WriteString("No modulo by 0")
 			return
 		}
 		sum, overflow := modulo(n1, n2)
 		if overflow {
 			return
 		}
-		os.Stdout.WriteString(string(sum))
+		printInt(sum)
 	}
 }
 
