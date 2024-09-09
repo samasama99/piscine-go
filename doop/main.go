@@ -2,8 +2,6 @@ package main
 
 import (
 	"os"
-
-	"github.com/01-edu/z01"
 )
 
 var NumbersAsRunes = []rune{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
@@ -54,7 +52,7 @@ func main() {
 		if overflow {
 			return
 		}
-		printInt(sum)
+		os.Stdout.WriteString(string(sum))
 	}
 }
 
@@ -160,7 +158,7 @@ func modulo(a, b int) (sum int, overflow bool) {
 
 func printInt(nbr int) {
 	if nbr == 0 {
-		z01.PrintRune(48)
+		os.Stdout.WriteString(string('0'))
 	} else {
 		printIntRecursive(nbr)
 	}
@@ -171,11 +169,5 @@ func printIntRecursive(nbr int) {
 		return
 	}
 	printIntRecursive(nbr / 10)
-	z01.PrintRune(NumbersAsRunes[nbr%10])
-}
-
-func printStr(s string) {
-	for _, r := range s {
-		z01.PrintRune(r)
-	}
+	os.Stdout.WriteString(string(NumbersAsRunes[nbr%10]))
 }
