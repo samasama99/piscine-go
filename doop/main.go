@@ -159,7 +159,7 @@ func modulo(a, b int) (sum int, overflow bool) {
 func printInt(nbr int) {
 	if nbr < 0 {
 		os.Stdout.WriteString(string('-'))
-		nbr = -nbr
+		printIntRecursive(-nbr)
 	} else if nbr == 0 {
 		os.Stdout.WriteString(string('0'))
 	} else {
