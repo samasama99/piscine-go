@@ -27,9 +27,11 @@ func Rot14(s string) string {
 func _isAlpha(c rune) bool {
 	return c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z'
 }
+
 func _isUpper(r rune) bool {
 	return r >= 'A' && r <= 'Z'
 }
+
 func _isLower(r rune) bool {
 	return r >= 'a' && r <= 'z'
 }
