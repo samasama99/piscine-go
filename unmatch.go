@@ -5,16 +5,10 @@ func Unmatch(a []int) int {
 	for _, value := range a {
 		history[value] = !history[value]
 	}
-	minUnmatched := int(^(uint(0)) >> 1)
-	for key, value := range history {
-		if value {
-			if minUnmatched > key {
-				minUnmatched = key
-			}
+	for _, value := range a {
+		if history[value] {
+			return value
 		}
-	}
-	if minUnmatched != int(^(uint(0))>>1) {
-		return minUnmatched
 	}
 	return -1
 }
