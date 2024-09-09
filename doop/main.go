@@ -8,7 +8,7 @@ var NumbersAsRunes = []rune{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
 
 func main() {
 	args := os.Args[1:]
-	if len(args) != 3 {
+	if len(args) != 3 || !isValidNumber(args[0]) || !isValidNumber(args[2]) {
 		return
 	}
 	op := args[1]
