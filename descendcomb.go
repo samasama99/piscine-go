@@ -7,11 +7,11 @@ func DescendComb() {
 	second := 98
 
 	for {
-		if second == 0 {
+		if second < 0 {
 			first--
 			second = first - 1
 		}
-		if second < 0 {
+		if first == 0 {
 			return
 		}
 		printInt(first)
