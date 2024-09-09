@@ -17,7 +17,10 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 				sorted = 1
 			}
 		} else {
-			if sorted != f(_a, _b) {
+			if sorted == -1 && f(_a, _b) > 0 {
+				return false
+			}
+			if sorted == 1 && f(_a, _b) < 0 {
 				return false
 			}
 		}
