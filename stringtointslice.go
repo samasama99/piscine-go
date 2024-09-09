@@ -1,9 +1,10 @@
 package piscine
 
 func StringToIntSlice(str string) []int {
-	IntSlice := make([]int, len(str))
-	for i := 0; i < len(str); i++ {
-		IntSlice[i] = int(str[i])
+	runes := []rune(str)
+	IntSlice := make([]int, len(runes))
+	for i, r := range runes {
+		IntSlice[i] = int(r)
 	}
 	return IntSlice
 }
