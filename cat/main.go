@@ -20,7 +20,8 @@ func main() {
 		if err != nil {
 			printStr("ERROR: ")
 			printStr(err.Error())
-			continue
+			printStr("\n")
+			os.Exit(1)
 		}
 		printStr(string(content))
 	}
