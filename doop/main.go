@@ -74,6 +74,9 @@ func Atoi(s string) int {
 }
 
 func isValidNumber(s string) bool {
+	if s[0] == '-' {
+		s = s[1:]
+	}
 	for _, c := range s {
 		if c < '0' || c > '9' {
 			return false
