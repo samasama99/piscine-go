@@ -7,7 +7,7 @@ func Split(s, sep string) []string {
 	sliceLen := len(sep)
 	length := len(s)
 	for i := 0; i < length; i++ {
-		if (length-i)-sliceLen == 0 {
+		if (length-i)-sliceLen == 0 && s[i:] != sep {
 			current += s[i:]
 			break
 		} else {
