@@ -12,6 +12,8 @@ func ShoppingSummaryCounter(str string) map[string]int {
 			count--
 		}
 	}
-	freq[""] = count
+	if count-1 != 0 {
+		freq[""] = count - 1
+	}
 	return freq
 }
