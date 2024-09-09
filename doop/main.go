@@ -4,6 +4,11 @@ import (
 	"os"
 )
 
+const (
+	MaxInt = int(^uint(0) >> 1)
+	MinInt = -MaxInt - 1
+)
+
 var NumbersAsRunes = []rune{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
 
 func main() {
@@ -111,8 +116,7 @@ func BasicAtoi(s string) int {
 
 func add(a, b int) (sum int, overflow bool) {
 	sum = a + b
-	bigSum := int64(a) + int64(b)
-	if int64(sum) != bigSum {
+	if (b > 0 && a > MaxInt-b) || (b < 0 && a < MinInt-b) {
 		overflow = true
 		return
 	}
@@ -120,19 +124,17 @@ func add(a, b int) (sum int, overflow bool) {
 }
 
 func multiply(a, b int) (sum int, overflow bool) {
-	sum = a * b
-	bigSum := int64(a) * int64(b)
-	if int64(sum) != bigSum {
+	if a != 0 && (b > MaxInt/a || b < MinInt/a) {
 		overflow = true
 		return
 	}
+	sum = a * b
 	return
 }
 
 func subtract(a, b int) (sum int, overflow bool) {
 	sum = a - b
-	bigSum := int64(a) - int64(b)
-	if int64(sum) != bigSum {
+	if (b > 0 && a < MinInt+b) || (b < 0 && a > MaxInt+b) {
 		overflow = true
 		return
 	}
@@ -140,22 +142,16 @@ func subtract(a, b int) (sum int, overflow bool) {
 }
 
 func divide(a, b int) (sum int, overflow bool) {
-	sum = a / b
-	bigSum := int64(a) / int64(b)
-	if int64(sum) != bigSum {
+	if a == MinInt && b == -1 {
 		overflow = true
 		return
 	}
+	sum = a / b
 	return
 }
 
 func modulo(a, b int) (sum int, overflow bool) {
 	sum = a % b
-	bigSum := int64(a) % int64(b)
-	if int64(sum) != bigSum {
-		overflow = true
-		return
-	}
 	return
 }
 
