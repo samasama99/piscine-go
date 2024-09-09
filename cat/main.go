@@ -23,7 +23,6 @@ func main() {
 			continue
 		}
 		printStr(string(content))
-		printStr("\n")
 	}
 }
 
