@@ -56,7 +56,6 @@ func main() {
 		}
 		printInt(sum)
 	}
-
 }
 
 func Atoi(s string) int {
