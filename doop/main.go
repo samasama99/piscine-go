@@ -162,6 +162,7 @@ func printInt(nbr int) {
 	} else {
 		printIntRecursive(nbr)
 	}
+	os.Stdout.WriteString(string('\n'))
 }
 
 func printIntRecursive(nbr int) {
